@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Build skeleton for the custom rpc">
-      <change afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Peer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/ServiceDescriptor.java" afterDir="false" />
+    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Update dependencies and create protocol classes.">
+      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/main/java/com/zelong/zlrpc/common/utils/ReflectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/ReflectionUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/TestClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-common/src/main/java/com/zelong/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Response.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +21,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "BarriWen"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="c0bbfac0-3541-4553-ba24-af296e31f35c" />
+        <option name="url" value="https://github.com/BarriWen/zl-rpc.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -35,6 +52,9 @@
         <option name="usePluginRegistry" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -53,15 +73,82 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "git-widget-placeholder": "main",
     "jdk.selected.JAVA_MODULE": "corretto-1.8",
     "onboarding.tips.debug.path": "/Users/barrywen/Desktop/projects/zl-rpc/zl-rpc-client/src/main/java/com/zelong/Main.java",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zelong.zlrpc.common.utils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ReflectionUtilsTest.invoke">
+    <configuration name="ReflectionUtilsTest.getPublicMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.common.utils.ReflectionUtilsTest" />
+      <option name="METHOD_NAME" value="getPublicMethods" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionUtilsTest.invoke" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.common.utils.ReflectionUtilsTest" />
+      <option name="METHOD_NAME" value="invoke" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionUtilsTest.newInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.common.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.common.utils.ReflectionUtilsTest" />
+      <option name="METHOD_NAME" value="newInstance" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ReflectionUtilsTest.invoke" />
+        <item itemvalue="JUnit.ReflectionUtilsTest.getPublicMethods" />
+        <item itemvalue="JUnit.ReflectionUtilsTest.newInstance" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -87,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708117208108</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Update dependencies and create protocol classes.">
+      <option name="closed" value="true" />
+      <created>1708120807266</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708120807266</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -103,7 +198,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Build skeleton for the custom rpc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build skeleton for the custom rpc" />
+    <MESSAGE value="Update dependencies and create protocol classes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update dependencies and create protocol classes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

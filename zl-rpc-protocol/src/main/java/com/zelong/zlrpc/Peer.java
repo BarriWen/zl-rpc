@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * Rpc endpoints
+ * Rpc endpoint
  *
  * @author zelong
  */

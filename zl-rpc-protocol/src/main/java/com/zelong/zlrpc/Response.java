@@ -19,7 +19,7 @@ public class Response {
      */
     private String message = "ok";
     /**
-     * Returned data
+     * Data returned
      */
     private  Object data;
 }
