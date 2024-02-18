@@ -4,14 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Update dependencies and create protocol classes.">
-      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/main/java/com/zelong/zlrpc/common/utils/ReflectionUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/ReflectionUtilsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/TestClass.java" afterDir="false" />
+    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Build reflection utils and junit tests for it">
+      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/main/java/com/zelong/zlrpc/codec/Decoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/main/java/com/zelong/zlrpc/codec/Encoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/main/java/com/zelong/zlrpc/codec/JSONDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/main/java/com/zelong/zlrpc/codec/JSONEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/test/java/com/zelong/zlrpc/codec/JSONEncoderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-codec/src/test/java/com/zelong/zlrpc/codec/TestBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-common/src/main/java/com/zelong/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Peer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/Response.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-codec/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-codec/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-codec/src/main/java/com/zelong/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/TestClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-common/src/test/java/com/zelong/zlrpc/common/utils/TestClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +26,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
@@ -29,12 +35,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "BarriWen"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;BarriWen&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -56,10 +62,10 @@
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2cSscftmVD3p5ncFy6Zy80EFIFn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -68,31 +74,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "git-widget-placeholder": "main",
-    "jdk.selected.JAVA_MODULE": "corretto-1.8",
-    "onboarding.tips.debug.path": "/Users/barrywen/Desktop/projects/zl-rpc/zl-rpc-client/src/main/java/com/zelong/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/barrywen/Desktop/projects/zl-rpc/zl-rpc-client/src/main/java/com/zelong/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zelong.zlrpc.codec" />
       <recent name="com.zelong.zlrpc.common.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ReflectionUtilsTest.invoke">
+  <component name="RunManager" selected="JUnit.JSONDecoderTest.decode">
+    <configuration name="JSONDecoderTest.decode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-codec" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.codec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.codec" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.codec.JSONDecoderTest" />
+      <option name="METHOD_NAME" value="decode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JSONEncoderTest.encode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-codec" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.codec.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.codec" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.codec.JSONEncoderTest" />
+      <option name="METHOD_NAME" value="encode" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectionUtilsTest.getPublicMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zl-rpc-common" />
       <extension name="coverage">
@@ -143,6 +182,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JSONDecoderTest.decode" />
+        <item itemvalue="JUnit.JSONEncoderTest.encode" />
         <item itemvalue="JUnit.ReflectionUtilsTest.invoke" />
         <item itemvalue="JUnit.ReflectionUtilsTest.getPublicMethods" />
         <item itemvalue="JUnit.ReflectionUtilsTest.newInstance" />
@@ -182,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708120807266</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Build reflection utils and junit tests for it">
+      <option name="closed" value="true" />
+      <created>1708123490894</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708123490894</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,7 +248,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Build skeleton for the custom rpc" />
     <MESSAGE value="Update dependencies and create protocol classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update dependencies and create protocol classes." />
+    <MESSAGE value="Build reflection utils and junit tests for it" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build reflection utils and junit tests for it" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

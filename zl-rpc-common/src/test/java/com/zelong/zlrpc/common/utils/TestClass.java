@@ -1,7 +1,7 @@
 package com.zelong.zlrpc.common.utils;
 
 /**
- *
+ * Class for Junit test
  *
  * @author zelong
  */
