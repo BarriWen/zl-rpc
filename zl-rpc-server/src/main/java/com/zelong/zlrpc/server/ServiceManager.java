@@ -11,6 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 public class ServiceManager {
+
     private Map<ServiceDescriptor, ServiceInstance> services;
 
     public ServiceManager() {

@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Implement Http Transport client and server">
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInstance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceManager.java" afterDir="false" />
+    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Server module update">
+      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/ServiceManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/TestClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/Testinterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/ServiceDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/ServiceDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInstance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +97,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.zelong.zlrpc.server" />
       <recent name="com.zelong.zlrpc.codec" />
       <recent name="com.zelong.zlrpc.common.utils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.JSONDecoderTest.decode">
+  <component name="RunManager" selected="JUnit.ServiceManagerTest.lookup">
     <configuration name="JSONDecoderTest.decode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zl-rpc-codec" />
       <extension name="coverage">
@@ -130,22 +135,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionUtilsTest.getPublicMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="zl-rpc-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zelong.zlrpc.common.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.common.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.common.utils.ReflectionUtilsTest" />
-      <option name="METHOD_NAME" value="getPublicMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReflectionUtilsTest.invoke" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="zl-rpc-common" />
       <extension name="coverage">
@@ -162,17 +151,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionUtilsTest.newInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="zl-rpc-common" />
+    <configuration name="ServiceManagerTest.lookup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.zelong.zlrpc.common.utils.*" />
+          <option name="PATTERN" value="com.zelong.zlrpc.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.common.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.common.utils.ReflectionUtilsTest" />
-      <option name="METHOD_NAME" value="newInstance" />
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.server" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.server.ServiceManagerTest" />
+      <option name="METHOD_NAME" value="lookup" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceManagerTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="zl-rpc-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zelong.zlrpc.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zelong.zlrpc.server" />
+      <option name="MAIN_CLASS_NAME" value="com.zelong.zlrpc.server.ServiceManagerTest" />
+      <option name="METHOD_NAME" value="register" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -180,11 +185,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServiceManagerTest.lookup" />
+        <item itemvalue="JUnit.ServiceManagerTest.register" />
         <item itemvalue="JUnit.JSONDecoderTest.decode" />
         <item itemvalue="JUnit.JSONEncoderTest.encode" />
         <item itemvalue="JUnit.ReflectionUtilsTest.invoke" />
-        <item itemvalue="JUnit.ReflectionUtilsTest.getPublicMethods" />
-        <item itemvalue="JUnit.ReflectionUtilsTest.newInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +250,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708385438223</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Server module update">
+      <option name="closed" value="true" />
+      <created>1708478101884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708478101884</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,7 +278,8 @@
     <MESSAGE value="Build reflection utils and junit tests for it" />
     <MESSAGE value="Build encoder and decode for serialization, and implement unit tests for them." />
     <MESSAGE value="Implement Http Transport client and server" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Http Transport client and server" />
+    <MESSAGE value="Server module update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server module update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
