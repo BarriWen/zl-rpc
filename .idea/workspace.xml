@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Server module update">
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInvoker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/ServiceManagerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/TestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-server/src/test/java/com/zelong/zlrpc/server/Testinterface.java" afterDir="false" />
+    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Finish server module and test with junit tests">
+      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RandomTransportSelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RpcClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RpcClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/TransportSelector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/ServiceDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-protocol/src/main/java/com/zelong/zlrpc/ServiceDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/RpcServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInstance.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceInstance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-server/src/main/java/com/zelong/zlrpc/server/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/Main.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708478101884</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Finish server module and test with junit tests">
+      <option name="closed" value="true" />
+      <created>1708547547335</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708547547335</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +283,8 @@
     <MESSAGE value="Build encoder and decode for serialization, and implement unit tests for them." />
     <MESSAGE value="Implement Http Transport client and server" />
     <MESSAGE value="Server module update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Server module update" />
+    <MESSAGE value="Finish server module and test with junit tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish server module and test with junit tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
