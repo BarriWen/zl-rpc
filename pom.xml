@@ -15,6 +15,7 @@
         <module>zl-rpc-transport</module>
         <module>zl-rpc-server</module>
         <module>zl-rpc-client</module>
+        <module>zl-rpc-example</module>
     </modules>
 
     <properties>

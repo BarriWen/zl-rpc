@@ -24,6 +24,10 @@ public class RpcServer {
     private ServiceManager serviceManager;
     private ServiceInvoker serviceInvoker;
 
+    public RpcServer() {
+        this(new RpcServerConfig());
+    }
+
     public RpcServer(RpcServerConfig config) {
         this.config =  config;
         this.net = ReflectionUtils.newInstance(config.getTransportClass());

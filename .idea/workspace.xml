@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Finish server module and test with junit tests">
-      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RandomTransportSelector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RpcClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/RpcClientConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/zlrpc/client/TransportSelector.java" afterDir="false" />
+    <list default="true" id="41e3d417-b786-497d-85a9-fdc24f01112c" name="Changes" comment="Complete remote invoker">
+      <change afterPath="$PROJECT_DIR$/zl-rpc-example/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-example/src/main/java/com/zelong/zlrpc/example/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zl-rpc-example/src/main/java/com/zelong/zlrpc/example/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zl-rpc-client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zl-rpc-client/src/main/java/com/zelong/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,22 +68,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-1.8&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/barrywen/Desktop/projects/zl-rpc/zl-rpc-client/src/main/java/com/zelong/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "main",
+    "jdk.selected.JAVA_MODULE": "corretto-1.8",
+    "onboarding.tips.debug.path": "/Users/barrywen/Desktop/projects/zl-rpc/zl-rpc-client/src/main/java/com/zelong/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "configurable.group.build"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.zelong.zlrpc.server" />
@@ -262,7 +261,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708547547335</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Client module halfway">
+      <option name="closed" value="true" />
+      <created>1708637775398</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708637775398</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Complete remote invoker">
+      <option name="closed" value="true" />
+      <created>1708639356467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708639356467</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -284,7 +299,9 @@
     <MESSAGE value="Implement Http Transport client and server" />
     <MESSAGE value="Server module update" />
     <MESSAGE value="Finish server module and test with junit tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finish server module and test with junit tests" />
+    <MESSAGE value="Client module halfway" />
+    <MESSAGE value="Complete remote invoker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete remote invoker" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
