@@ -28,7 +28,7 @@ public class ServiceDescriptor {
         sdp.setMethod(method.getName());
         sdp.setReturnType(method.getReturnType().getName());
 
-        Class[] parameterClasses = method.getParameterTypes();
+        Class<?>[] parameterClasses = method.getParameterTypes();
         String[] parameterTypes = new String[parameterClasses.length];
         for (int i = 0; i < parameterClasses.length; i++) {
             parameterTypes[i] = parameterClasses[i].getName();
